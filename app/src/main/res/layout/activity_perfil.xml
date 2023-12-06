@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerfilUsuario">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="fondoMenuPrincipal2.json"
+        app:lottie_loop="true"
+        app:lottie_speed="1.0"
+        app:lottie_imageAssetsFolder="images"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/profileLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imagenPerfil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_profile_image"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/nombrePerfil"/>
+
+        <TextView
+            android:id="@+id/nombrePerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagenPerfil"
+            android:text="Nombre de Usuario"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/correoPerfil"
+            app:layout_constraintStart_toStartOf="@+id/imagenPerfil"
+            app:layout_constraintEnd_toEndOf="@+id/imagenPerfil"/>
+
+        <TextView
+            android:id="@+id/correoPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nombrePerfil"
+            android:text="correo@example.com"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/botonFoto"
+            app:layout_constraintStart_toStartOf="@+id/imagenPerfil"
+            app:layout_constraintEnd_toEndOf="@+id/imagenPerfil"/>
+
+        <Button
+            android:id="@+id/botonFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/correoPerfil"
+            android:text="Cambiar Foto de Perfil"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/imagenPerfil"
+            app:layout_constraintEnd_toEndOf="@+id/imagenPerfil"/>
+
+        <!-- Puedes agregar más elementos como estadísticas, botones de acción, etc. -->
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
