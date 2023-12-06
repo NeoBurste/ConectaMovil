@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="fondoMenuPrincipal.json"
+        app:lottie_fileName="fondoMenuPrincipal2.json"
         app:lottie_loop="true"
         app:lottie_speed="1.0"
         app:lottie_imageAssetsFolder="images"
@@ -22,8 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <LinearLayout
         android:id="@+id/menuLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,40 +30,101 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498">
+        app:layout_constraintVertical_bias="0.5">
 
-        <Button
-            android:id="@+id/CerrarSesion"
+
+        <!-- Primer Boton -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="@string/CerrarSesion" />
+            android:orientation="vertical"
+            android:gravity="center">
 
-        <Button
-            android:id="@+id/Contactos"
+            <ImageView
+                android:id="@+id/Contactos"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/iconocontactos"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="mostrarContactos" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lista de Contactos"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Segundo Boton -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="@string/ListaContactos" />
+            android:orientation="vertical"
+            android:gravity="center">
 
-        <Button
-            android:id="@+id/ChatGeneral"
+            <ImageView
+                android:id="@+id/ChatGeneral"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/iconochat"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat General"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Tercer Boton -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="ChatGeneral" />
+            android:orientation="vertical"
+            android:gravity="center">
 
+            <ImageView
+                android:id="@+id/Perfil"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/iconoperfil"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="verPerfil" />
 
-        <Button
-            android:id="@+id/Perfil"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver Perfil"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Cuarto Boton -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Perfil" />
+            android:orientation="vertical"
+            android:gravity="center">
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            <ImageView
+                android:id="@+id/CerrarSesion"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/cerrarsesion"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="cerrarSesion" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cerrar Sesión"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
